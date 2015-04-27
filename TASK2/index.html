@@ -1,0 +1,100 @@
+
+<!-- saved from url=(0033)http://2.givememoney.sinaapp.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,mininum-scale=1.0,maxinum-scale=1.0,user-scalable=no">
+		<style type="text/css">
+		*{ 
+			padding: 0;margin: 0;
+			font-family: -webkit-pictograph;
+		}
+		#container{
+			width: 96%;
+			padding: 2%;
+			background-color: #000;
+			color: #FFF;
+		}
+		#title{
+			font-size: 2.8em;
+			display: block;
+			text-align: center;
+		}
+		#playGround{
+			margin: 2%;
+		}
+		.btn{
+			padding: 0 10px;
+			height: 50px;
+			-webkit-appearance:none;
+			background: #FFFFFF;
+			margin: 10px auto;
+			display: block;
+			font-size: 25px;
+		}
+		#arena{
+			display: block;
+			width: 100%;
+			height: 100px;
+			border: solid;
+			font-size: 1.5em;
+  			text-align: center;
+  			line-height: 100px;
+		}
+		#guessArea{
+			font-size: 2.3em;
+			text-align: center;
+		}
+		#guessArea span{
+			width: 14%;
+			display: inline-block;
+			cursor: pointer;
+			border: solid 1px;
+			margin: 1px 0;
+		}
+		#guessArea span:hover{
+			color: red;
+		}
+		#statue p{
+			font-size: 1em;
+			font-weight: bolder;
+			line-height: 20px;
+		}
+		#statue p span{
+			font-weight: normal;
+		}
+		.hidden{display:none;}
+
+		.black{color: #000;}
+		.white{color: #FFF;}
+		</style>
+
+	</head>
+	<body style="zoom: 1;">
+		<div id="container">
+			<h2 id="title">HANGMAN</h2>
+			<div id="playGround">
+				
+				<button class="btn" v-on="click: startGame" v-show="!gameStatus.isStart" id="start">START</button>
+				<button class="btn" v-on="click: giveWord" v-show="gameStatus.isStart && sessionID != ''" id="giveWord">GIVE A WORD</button>
+				<h2 id="arena">{{ remoteData.message }}</h2>
+				<div id="guessArea">
+				<!-- style="color: {{ $index | setStyle }}" -->
+					<span v-on="click: checkChar"  v-repeat="26">{{ $index | renderChar $index }}</span>
+				</div>
+				<div id="statue">
+					<p>Words Left: <span id="wordLeft">{{ remoteData.numberOfWordsToGuess }}</span></p>
+					<p>Life Left:<span id="lifeLeft">{{ remoteData.numberOfGuessAllowedForEachWord }}</span></p>
+					<p>Total Words:<span id="wordCount">5</span></p>
+    				<p>Correct Times: <span id="rightWord">0</span></p>
+    				<p>LifeUse:<span id="lifeUse">24</span></p>
+    				<p>Score:<span id="score">-24</span></p>
+				</div>
+				<button class="btn" id="getResult">GetResult</button>
+				<button class="btn" id="submit">SUBMIT</button>
+			</div>
+		</div>
+		<script src="./index_files/jquery.js"></script>
+		<script src="./index_files/vue.js"></script>
+		<script src="./index_files/main.js"></script>
+</body></html>
