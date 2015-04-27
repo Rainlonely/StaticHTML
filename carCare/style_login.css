@@ -1,0 +1,109 @@
+body{ 
+	margin: 0; 
+	padding: 0;
+	font-family: "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold',Microsoft YaHei,Microsoft YaHei Regular,SimHei,SimHei Regular, "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	background-color: black;
+}
+.main-content{
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-size: 100% auto;	
+    
+    height:900px;
+}
+#audi{background-image: url(images/login_audi.jpg);}
+#das{background-image: url(images/login_das.jpg);}
+#mb{background-image: url(images/login_benz.jpg);}
+#sk{background-image: url(images/login_sk.jpg);}
+#nissan{background-image: url(images/login_ns.jpg);}
+#lu {
+    background-image: url(images/login_luxgen.jpg);
+    background-size:406px auto;
+    background-position: 20% 20%;
+    background-color: #a1a1a1;
+}
+.glass-effect{
+    -webkit-filter: blur(6px);
+    overflow: hidden;
+    z-index: 1;
+    /*position: absolute;*/    
+}
+.glass-cover{
+    
+	
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    background-color: rgba(255, 255, 255, .4);
+    z-index: 3;
+}
+.title-content{
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 0;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    font-size:21px;
+}
+.footer-content{
+
+}
+.login-container{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+}
+.login-form{
+	position: relative;
+	margin: -200px 0 0 -180px;
+	color: #421776;
+	background-color: #FFF;
+	padding: 20px;
+    width:360px;
+    height:360px;
+    border-radius: 60px;
+    z-index:8;
+}
+.dc-logo{
+    position: relative;
+    left: 114px;
+    width: 130px;
+    height: 84px;
+    z-index: 10;
+}
+.login-form .title{
+	font-size: 35px;
+    text-align:center;
+}
+.field{
+    
+    display: block;
+    margin: 40px 15px 0 15px;
+    
+}
+.dc-login{
+    position: absolute;
+    right: 35px;
+    bottom: 120px;
+}
+input {
+    color: rgba(51,51,51, 1);
+    font-size:19px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    background: transparent;
+    border: none;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    outline: none;
+    height: 50px;
+}
+.border{border-bottom:solid 1px rgba(51,51,51, 1);}
