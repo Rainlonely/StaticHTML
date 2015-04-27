@@ -1,0 +1,127 @@
+body{
+	background: url(./bg.jpg);
+}
+.container{
+	border: solid 1px #171a1f;
+	border-radius: 8px;
+	width: 324px;
+	height: 440px;
+	overflow: hidden;
+	position: absolute;
+	background-color: #2f363e;
+	font-family: Microsoft Yahei;
+	top:50%; left:50%; 
+	margin-left:-220px; 
+	margin-top:-162px;
+}
+.shadow {
+    -moz-box-shadow: 0px 6px 11px #1a1d22;
+    -webkit-box-shadow: 0px 6px 11px #1a1d22;
+    box-shadow: 0px 6px 11px #1a1d22;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#1a1d22')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#1a1d22');
+}
+.upArea{
+	height: 138px;
+	width: 100%;
+	border-top: solid 1px #f3efe6;
+	background:#e7decd; 
+}
+.dotContainer{
+	width: 25px;
+	height: 18px;
+	position: relative;
+	margin: 21px auto 0 auto;
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+.dot{
+	width: 4px;
+	height: 4px;
+	background:
+		-webkit-gradient(linear, right center, left center, from(#faf2e5), to(#cdc4b3), color-stop(0.25, #f0eadc), color-stop(0.75, #d7cebd));
+		-ms-gradient(linear, right center, left center, from(#faf2e5), to(#cdc4b3), color-stop(0.25, #f0eadc), color-stop(0.75, #d7cebd));
+		-o-gradient(linear, right center, left center, from(#faf2e5), to(#cdc4b3), color-stop(0.25, #f0eadc), color-stop(0.75, #d7cebd));
+		gradient(linear, right center, left center, from(#faf2e5), to(#cdc4b3), color-stop(0.25, #f0eadc), color-stop(0.75, #d7cebd));
+	background-color: #dfd6c5;
+	float: left;
+	margin:0 3px 3px 0;
+	position: relative;
+	border-radius: 2px;
+}
+.avatarArea{
+	width: 154px;
+	height: 154px;
+	border-radius: 82px;
+	border: solid 5px #e7decd;
+	position: relative;
+	bottom: -17px;
+	left: 80px;
+	background: url(avatar.png) #cfc7ba no-repeat;
+}
+.midArea{
+	text-align: center;
+	border-bottom: solid 1px #171a1f;
+	height: 140px;
+}
+.avatarName{
+  color: #e7decd;
+  font-size: 18px;
+  margin-top: 105px;
+}
+.avatarTitle{
+	color: #535b68;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+}
+.btnFollow{
+	width: 162px;
+	height: 37px;
+	color: #e7dfca;
+	line-height: 37px;
+	border: solid 1px #171c22;
+	border-radius: 4px;
+	background-color: #c44b30;
+	overflow: hidden;
+	margin: 28px auto 0 auto;
+	text-shadow: 1px 1px 2px #9a3b27;
+}
+.btnFollow:hover{
+	background-color: #c35e47;
+}
+.btnFollow:before{
+	content: "";
+	display: block;
+	position: relative;
+	height: 1px;
+	background-color: #d16e59;
+	top: 0;
+}
+.downArea{
+	color: #545a66;
+	text-align: center;
+	line-height: 54px;
+	overflow: hidden;
+}
+.downArea b{
+	color: #1a1d24;
+}
+
+.follower{
+	height: 54px;
+	width: 160px;
+	border-right: solid 1px #3e424d;float: left;
+		border-top: solid 1px #3e424d;
+}
+.following{
+	height: 54px;
+	width: 162px;
+	border-left: solid 1px #171a1f;
+		border-top: solid 1px #3e424d;
+	float: left;
+}
