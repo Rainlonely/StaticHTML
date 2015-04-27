@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- <html xmlns:wb="http://open.weibo.com/wb"> 
+	<meta property="wb:webmaster" content="2864b0cddcf45f11" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3285803562" type="text/javascript" charset="utf-8"></script>
+-->
+<html>
+	<head>
+		<title>YOOXMAS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> 
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" media="(max-width: 640px), (max-device-width: 640px)" href="css/small-style.css"/>		
+		<script type="text/javascript">
+		var yooxmas14 = {
+            currentStyle: "Elegant",
+            styleStartPosition:{
+                TheHost: 0,
+                Youngster: 777,
+                Innovative:1395,
+                Elegant:2196,
+                Active:3150,
+                Stylist: 3891
+            },
+            styleIntervalPosition:{
+                TheHost: [0,-777],
+                Youngster: [-777,-1395],
+                Innovative:[-1395,-2196],
+                Elegant:[-2196,-3150],
+                Active:[-3150,-3891],
+                Stylist: [-3891,-4497]
+            },
+            bannerStylePosition: {
+                        TheHost:0
+                            ,
+                        Youngster:1
+                            ,
+                        Innovative:2
+                            ,
+                        Elegant:3
+                            ,
+                        Stylist:4
+                            ,
+                        Active:5
+
+                },
+            labels: {
+                backToDinner: "返回"
+            }
+            ,
+            recipes: {
+                recipe1:"http://cdn2.yoox.biz/yoox14/sections/yooxmas14/recipes/recipe1.pdf",
+                recipe2:"http://cdn2.yoox.biz/yoox14/sections/yooxmas14/recipes/recipe2.pdf",
+                recipe3:"http://cdn2.yoox.biz/yoox14/sections/yooxmas14/recipes/recipe3.pdf",
+                recipe4:"http://cdn2.yoox.biz/yoox14/sections/yooxmas14/recipes/recipe4.pdf",
+                recipe5:"http://cdn2.yoox.biz/yoox14/sections/yooxmas14/recipes/recipe5.pdf"
+            }
+        };
+        yooxmas14.currentStyleStartPosition = yooxmas14.styleStartPosition[yooxmas14.currentStyle];
+        yooxmas14.currentBannerStylePosition = yooxmas14.bannerStylePosition[yooxmas14.currentStyle];
+        var questionList = {
+        	"list":[
+        	{"videoID":"XODE4NzE4ODky","q":"今年的YOOXMAS《风情时尚盛宴》将在哪个城市举办？","a1":"北京","a2":"威尼斯","a3":"罗马","ar":"bingo"},
+        	{"videoID":"XODI0MzE1MDM2","q":"女主角在宴会上佩戴的面具是哪个造型？","a1":"猫 ","a2":"猴子 ","a3":"狮子 ","ar":"bingo"},
+        	{"videoID":"XODI2MzI4ODYw","q":"赴宴时，女主角的发型非常凌乱的原因是？","a1":"她们乘坐了热气球","a2":"她们忘了去美发店","a3":"她们认为这是最新的发型趋势","ar":"bingo"},
+        	{"videoID":"XODMwOTIzNTI4","q":"Barnaba Fornasetti的职业是什么？","a1":"设计师 ","a2":"演员  ","a3":"足球运动员","ar":"bingo"},
+        	{"videoID":"XODM5ODg5MTA4","q":"Tina Leung 在视频中吃了什么？","a1":"比萨 ","a2":"冰激凌 ","a3":"面条","ar":"bingo"},
+        	{"videoID":"XODQ1MDEzNTMy","q":"码头上Monica穿的外套是什么颜色？","a1":"绿色","a2":"紫色","a3":"红色","ar":"bingo"}
+        	]
+        };
+        
+        function onShareComplete(){
+        	//alert('asdfasdf');
+        	if ($(".right").hasClass("active")){
+        		$(".mfp-container").click();
+	        	$(".sharing").addClass("active");
+	        	$(".right").removeClass("active");
+        	} else {
+        		alert('请回答问题先哦');
+        	}
+
+        }
+        window.shareData = {
+        	"imgUrl":"http://yooxmas.sinaapp.com/WeChat_ICON_Share.png",
+        	"timeLineLink":"http://yooxmas.sinaapp.com",
+        	"tTitle":"YOOXMAS-在盛宴中寻找你的完美圣诞礼物！",
+        	"tContent":"在盛宴中寻找你的完美圣诞礼物！",
+        	"url":"http://yooxmas.sinaapp.com"
+        };
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        	WeixinJSBridge.call('showOptionMenu');
+        	// 发送给好友
+			WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+				WeixinJSBridge.invoke('sendAppMessage', { 
+					"img_url": window.shareData.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": window.shareData.url,
+					"desc": window.shareData.tContent,
+					"title": window.shareData.tTitle
+				}, onShareComplete);
+			});
+	        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+				WeixinJSBridge.invoke('shareTimeline', {
+					"img_url": window.shareData.imgUrl,
+					"img_width": "640",
+					"img_height": "640",
+					"link": window.shareData.timeLineLink,
+					"desc": window.shareData.tContent,
+					"title": window.shareData.tTitle
+				}, onShareComplete);
+			});
+
+	    });
+		</script>
+		<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50749624-1', 'auto');
+  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body>
+		<!--Wechatlayer-->
+		<div class="mfp-wrap mfp-auto-cursor pop-in mfp-ready" style="overflow-y: auto; overflow-x: hidden; display: none;">
+			<div class="mfp-container mfp-inline-holder">
+				<div class="mfp-content">
+					<div id="panel-weixin" class="panel">
+						<div class="mobile-content">
+							<h3>点击右上角分享按钮分享</h3>
+						</div>
+						<div class="desk-content">
+							<h3>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h3>
+							<section class="weixin-section">
+								<p><img src="img/generate.png" alt=""></p>
+							</section>		
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--VideoLayer-->
+		<div class="overlay" id="overlay"></div>
+		<div id="videoLayer">
+		    <!-- <div id="videoBoxBC" class="videoBox"></div> -->
+		    <div id="youkuplayer"></div>
+		</div>
+			 
+		<!--topContent-->
+		<div class="topBanner">
+			<span class="logo">YOOX.COM</span>
+			<div class="fixWidth bgImage">
+				<span class="title">意味24</span>
+				<span class="subtitle">在盛宴中寻找你的完美圣诞礼物</span>
+				<span class="content">
+				即日起至12月25日，在YOOX.COM官方活动页面观看《威尼斯风情时尚盛宴》系列短片，留意视频细节并在问答题中给出正确答案，<br/>
+	即可获得圣诞季专属折扣代码。转发分享本活动至你的微信，还可赢取由 YOOX 特别甄选的完美圣诞礼物。
+				</span>
+<!-- 				<span class="content">
+					主演:<br/>
+					 Arrigo Cipriani, Alessandra Mastronardi, Ivan Olita, Charlotte Colbert, Lynn Yeager, Barnaba Fornasetti, Osanna Visconti di Modrone, Madina Visconti di Modrone, Carlo Cudicini, Monica Cima, Tina Leung, Vera Arrivabene, Viola Arrivabene.
+				</span> -->
+			</div>
+		</div>
+		<div class="wrap area">
+			<div class="panorama">
+        		<div class="preloader" style="display: none;"></div>
+	        	<div class="panorama-view" style="">
+		            <div class="panorama-container" style="margin-left: -804px; width: 8994px; height: 580px;">
+		                <img class="pnoreamaPreview" src="http://cdn2.yoox.biz/yoox14/sections/yooxmas14/dinner360/VENEZIA_10_def_high.jpg" data-width="4497" data-height="580" lt="Panorama Alt" style="left: 0px;">
+		                <img class="pnoreamaPreview" src="http://cdn2.yoox.biz/yoox14/sections/yooxmas14/dinner360/VENEZIA_10_def_high.jpg" data-width="4497" data-height="580" lt="Panorama Alt" style="left: 4497px;">
+			            <a class="area activeVideoPlayer" rel="XODE4NzE4ODky" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODE4NzE4ODky" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODI0MzE1MDM2" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODI0MzE1MDM2" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODI2MzI4ODYw" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODI2MzI4ODYw" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODMwOTIzNTI4" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODMwOTIzNTI4" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODM5ODg5MTA4" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODM5ODg5MTA4" href="#"></a>
+			            <a class="area activeVideoPlayer" rel="XODQ1MDEzNTMy" href="#"></a>   
+			            <a class="area activeVideoPlayer" rel="XODQ1MDEzNTMy" href="#"></a>   
+			        </div>
+	        	</div>
+		        		<a class="prev controls"><span>◀</span></a>
+		        		<a class="next controls"><span>▶</span></a>
+    		</div>
+
+			<div class="fixWidth">
+				<div class="quiz sbp active">
+					<span class="bigFont">
+						<p>以上短片中，ARRIGO CIPRIANI先生所在的城市是？</p>
+					</span>
+					<span class="answer">
+						<ul>
+							<li>
+								<input id="a1" type="radio" name="answer" value="英国－伦敦" checked="checked" >
+								<label for="a1">英国－伦敦</label>
+							</li>
+							<li>
+								<input id="a2" type="radio" name="answer" value="bingo">
+								<label for="a2">意大利－威尼斯</label>
+							</li>
+							<li>
+								<input id="a3" type="radio" name="answer" value="法国－尼斯">
+								<label for="a3">法国－尼斯</label>
+							</li>
+						</ul>
+					</span>
+					<span class="submit send">提交答案</span>
+					<a class="des" href="#gameRule">了解活动细则</a>
+				</div>
+				<div class="sharing sbp">
+					<span class="bigFont">
+						为您奉上YOOX.CN圣诞季专属7折代码：
+					</span>
+					<span>
+						<strong>YOOXMASCN</strong>
+					</span>
+					<span>
+						有效期至2014年12月31日
+					</span>
+					<hr/>
+					<span class="bigFont">YOOX.CN感谢您的参与！</span>
+					<span>我们将于活动结束后在官方微信公布获奖名单。</span>
+					<br/>
+					<a class="des" href="#gameRule">了解活动细则</a>
+				</div>
+				<div class="right sbp">
+					<span class="bigFont">
+							您真是独具慧眼的时尚潮人，细节捕捉分毫不差！
+					</span>
+					
+					<hr/>
+					<span class="bigFont">
+						点击右上角分享本活动至朋友圈<br/>
+						发送朋友圈截图+ “意味24”至微信公众号“YOOX网络概念店”<br/>
+						便可轻松参与完美圣诞礼物抽奖
+					</span>
+					<!-- <span class="weibo" id="wb_publish">分享到新浪微博：</span> -->
+					<span class="weixin" id="wx_publish">分享到微信：</span>
+					<br/>
+					<span>我们将于活动结束后在官方微信公布奖品名单</span>
+					<br/>
+					<!-- <button type="button" id="wb_publish" >分享到新浪微博：</button> -->
+					<a class="des" href="#gameRule">了解活动细则</a>
+				</div>
+				<div class="wrong sbp">
+					<span class="bigFont">糟糕，答案不对，要不要再看一遍？</span>
+					<span class="submit replay">再次观看</span>
+					<a class="des" href="#gameRule">了解活动细则</a>
+				</div>
+			</div>
+		</div>
+		<div class="bottomBanner">
+			<div class="styleBanner fixWidth">
+	            <div id="banner_BNR_STYLE_4" class="banner">
+	            </div>
+	            <a href="http://www.yoox.cn/shoponline?tskay=01DD0763&dept=yooxmasmen&utm_source=WeChat&utm_medium=social&utm_campaign=yooxmasmktm&tp=55200&gender=U" class="shopBtn man" name="">选购男士系列</a>
+	            <a href="http://www.yoox.cn/cn/%E5%A5%B3%E5%A3%AB/shoponline?dept=yooxmaswomen&gender=D&page=1&season=X&utm_source=WeChat&utm_medium=social&utm_campaign=yooxmasmktw&tp=55200" class="shopBtn women" name="">选购女士系列</a>               
+	        </div>
+	    </div>
+	    <a name="gameRule"></a>
+	    <div class="gameRule">
+	    	<div class="detail fixWidth">
+	    		<h3>活动细则</h3>
+	    		<span>即日起至12月25日，在微信公众号“YOOX网络概念店”活动页面观看《威尼斯风情时尚盛宴》系列短片，留意视频细节并在问答题中给出正确答案，即可获 得系列圣诞季专属折扣代码。分享本活动至朋友圈并发送朋友圈截图+ “意味24”至微信公众号“YOOX网络概念店”，还可赢取由 YOOX 特别甄选的完美圣诞礼物。</span>
+	    		<span>
+	    			<em>参与方式：</em><br/>
+					1.关注微信公众号：YOOX网络概念店；<br/>
+					2.在公众号活动页面观看《威尼斯风情时尚盛宴》系列短片，留意视频细节；<br/>
+					3.在问答题中给出答案；<br/>
+					4.分享本活动至朋友圈即刻获得圣诞折扣代码；<br/>
+					5.发送朋友圈截图+ “意味24”至微信公众号“YOOX网络概念店”，轻松参与完美圣诞礼物抽奖。</span>
+	    		<span>
+	    			<em>奖项设置：</em><br/>
+					一等奖，YOOX特别甄选完美圣诞礼物1件，价值RMB 1500；<br/>
+					二等奖，YOOX甄选完美圣诞礼物3件，价值RMB 700； <br/>
+					三等奖，Lady ASTI（来自意大利爱思醍地区100％ 莫斯卡托白葡萄）20件，价值RMB500。<br/>
+					<img class="prize" src="img/IMG_6368.png"/>
+				</span>
+				<span><em>备注：</em><br/>
+					1.主办方将对中奖者进行核查，如不符合活动规则将取消获奖资格。“不符合活动规则“的情况包括但不限于：不符合活动参与规则、 同一账号重复获奖、注销账号、取消对“YOOX网络概念店”微信公众号的关注或 删除微信朋友圈转发等情况； <br/>
+					2.奖项内容以最终确认为准；<br/>
+					3.本活动最终解释权归主办方所有；<br/>
+					4.我们将于活动结束后在官方微信公众号（YOOX网络概念店）公布获奖名单，请实物奖获奖者在获奖名单公布后一周内将您的信息（联系地址、姓名、电话）通过微信消息告诉我们， 奖品将会以快递形式送出。获奖者逾期未提供信息的，视为自动放弃获奖资格。</span>
+			</div>
+	    </div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.panorama360.min-mod.js"></script>
+	<script type="text/javascript" src="js/yooxmas.js"></script>
+
+			
+
+</html>
